@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+# TMDB Movie Streaming Landing Page
+
+This is a modern landing page for a movie streaming service, built with [Next.js](https://nextjs.org), [shadcn/ui](https://ui.shadcn.com/), [Tailwind CSS](https://tailwindcss.com/), and [TMDB API](https://www.themoviedb.org/documentation/api). It features server and client component separation, carousels for movies/TV, and clean, reusable UI.
+
+## Features
+
+- Next.js App Router with server and client components
+- TMDB API integration (movies & TV sections)
+- shadcn/ui Carousel and Card components
+- Tailwind CSS for styling
+- Axios for API requests
+- Modular, reusable MoviesCarousel component
+- Sections: Trending Movies, Trending TV, Now Playing, Popular Movies, Top Rated Movies, Upcoming Movies, Popular TV, Latest TV, Top Rated TV
 
 ## Getting Started
 
-First, run the development server:
+1. **Install dependencies:**
+	```bash
+	npm install
+	# or
+	yarn install
+	```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. **Set up your TMDB API key:**
+	- Copy your TMDB API Bearer token to a `.env` file:
+	  ```env
+	  TMDB_API_KEY=your_tmdb_api_key_here
+	  ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Run the development server:**
+	```bash
+	npm run dev
+	# or
+	yarn dev
+	```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. Open [http://localhost:3000](http://localhost:3000) to view the landing page.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+- `app/` — Next.js app directory (layout, page, etc.)
+- `components/`
+  - `server/` — Server components (data fetching)
+  - `client/` — Client components (UI logic)
+  - `ui/` — shadcn/ui components (Carousel, Card, etc.)
+  - `common/` — Header, Footer, etc.
+- `lib/` — Utilities (axios instance, constants)
+- `redux/` — (Optional) Redux store setup
 
-To learn more about Next.js, take a look at the following resources:
+## Customization
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Add or remove sections by editing `app/page.tsx` and the corresponding server components.
+- Update API endpoints in `lib/constants.ts` as needed.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Credits
 
-## Deploy on Vercel
+- [TMDB API](https://www.themoviedb.org/documentation/api)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+_Built by HabitualCoder_
